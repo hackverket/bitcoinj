@@ -76,6 +76,7 @@ public abstract class NetworkParameters {
     protected long packetMagic;  // Indicates message origin network and is used to seek to the next message when stream state is unknown.
     protected int addressHeader;
     protected int p2shHeader;
+    protected int coloredCoinGroup;
     protected int dumpedPrivateKeyHeader;
     protected int interval; // blocks per difficulty cycle
     protected int targetTimespan;
@@ -330,6 +331,13 @@ public abstract class NetworkParameters {
      */
     public int getP2SHHeader() {
         return p2shHeader;
+    }
+    
+    /**
+     * First byte of a base58 encoded colored coin group address.
+     */
+    public int getColoredCoinHeader() {
+        return coloredCoinGroup;
     }
 
     /** First byte of a base58 encoded dumped private key. See {@link org.bitcoinj.core.DumpedPrivateKey}. */

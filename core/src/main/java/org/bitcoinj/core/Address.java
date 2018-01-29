@@ -71,6 +71,15 @@ public class Address extends VersionedChecksummedBytes {
             throw new RuntimeException(e);  // Cannot happen.
         }
     }
+    
+    /** Returns an Address that represents the given P2SH script hash. */
+    public static Address fromColoredCoinGroup(NetworkParameters params, byte[] hash160) {
+        try {
+            return new Address(params, params.getColoredCoinHeader(), hash160);
+        } catch (WrongNetworkException e) {
+            throw new RuntimeException(e);  // Cannot happen.
+        }
+    }
 
     /** Returns an Address that represents the script hash extracted from the given scriptPubKey */
     public static Address fromP2SHScript(NetworkParameters params, Script scriptPubKey) {
