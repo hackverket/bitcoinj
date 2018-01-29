@@ -155,7 +155,7 @@ public class ScriptOpCodes {
     public static final int OP_NOP4 = 0xb3;
     public static final int OP_NOP5 = 0xb4;
     public static final int OP_NOP6 = 0xb5;
-    public static final int OP_NOP7 = 0xb6;
+    public static final int OP_GROUP = 0xb6;
     public static final int OP_NOP8 = 0xb7;
     public static final int OP_NOP9 = 0xb8;
     public static final int OP_NOP10 = 0xb9;
@@ -269,7 +269,7 @@ public class ScriptOpCodes {
         .put(OP_NOP4, "NOP4")
         .put(OP_NOP5, "NOP5")
         .put(OP_NOP6, "NOP6")
-        .put(OP_NOP7, "NOP7")
+        .put(OP_GROUP, "GROUP")
         .put(OP_NOP8, "NOP8")
         .put(OP_NOP9, "NOP9")
         .put(OP_NOP10, "NOP10").build();
@@ -383,7 +383,7 @@ public class ScriptOpCodes {
         .put("NOP4", OP_NOP4)
         .put("NOP5", OP_NOP5)
         .put("NOP6", OP_NOP6)
-        .put("NOP7", OP_NOP7)
+        .put("GROUP", OP_GROUP)
         .put("NOP8", OP_NOP8)
         .put("NOP9", OP_NOP9)
         .put("NOP10", OP_NOP10).build();

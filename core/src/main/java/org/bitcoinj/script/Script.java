@@ -1367,7 +1367,9 @@ public class Script {
                 case OP_NOP4:
                 case OP_NOP5:
                 case OP_NOP6:
-                case OP_NOP7:
+                case OP_GROUP:
+                	// Checking top of stack
+                	System.out.println("First element in stack is " + stack.getFirst().length + " byte long");
                 case OP_NOP8:
                 case OP_NOP9:
                 case OP_NOP10:
